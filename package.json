@@ -1,0 +1,30 @@
+{
+  "name": "html2plaintext",
+  "version": "0.1.0",
+  "description": "convert html-formatted text to plaintext",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha"
+  },
+  "repository": "git@github.com:AgileDiagnosis/html2plaintext.git",
+  "keywords": [
+    "html",
+    "plain",
+    "text"
+  ],
+  "contributors": ["jden <jason@denizac.org>"],
+  "author": "Agile Diagnosis <hello@agilediagnosis.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "heredoc": "~1.1.0",
+    "chai": "~1.5.0",
+    "mocha": "~1.9.0"
+  },
+  "dependencies": {
+    "htmldec": "0.0.1",
+    "plumb": "~0.1.0"
+  }
+}
