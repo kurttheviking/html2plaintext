@@ -40,4 +40,12 @@ describe('html2plaintext', function () {
     h2p('&lt;3 &amp; &lt;/3')
       .should.equal('<3 & </3')
   })
+  it('calls toString on input', function () {
+    h2p(3290782432)
+      .should.equal('3290782432')
+  })
+  it('is safe on null or undefined input', function () {
+    h2p(null).should.equal('')
+    h2p().should.equal('')
+  })
 })

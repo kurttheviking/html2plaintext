@@ -2,6 +2,7 @@ var plumb = require('plumb')
 var decode = require('htmldec')
 
 var html2plaintext = plumb(
+  stringify,
   collapseWhitespace,
   linebreaks,
   stripTags,
@@ -9,8 +10,10 @@ var html2plaintext = plumb(
   trim
 )
 
-function stripTags (str) {
-  return str.replace(/<[^<]+>/g, '')
+
+function stringify(x) {
+  return x ? x.toString()
+           : ''
 }
 
 function collapseWhitespace (val) {
@@ -28,6 +31,10 @@ function linebreaks (str) {
     }
     return x
   })
+}
+
+function stripTags (str) {
+  return str.replace(/<[^<]+>/g, '')
 }
 
 function trim (str) {
