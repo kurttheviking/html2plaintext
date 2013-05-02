@@ -1,6 +1,6 @@
 {
   "name": "html2plaintext",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "convert html-formatted text to plaintext",
   "main": "index.js",
   "directories": {
