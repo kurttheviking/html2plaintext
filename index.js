@@ -1,5 +1,5 @@
 var plumb = require('plumb')
-var decode = require('htmldec')
+var decode = require('ent').decode
 
 var html2plaintext = plumb(
   stringify,

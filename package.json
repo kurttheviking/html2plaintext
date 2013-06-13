@@ -1,6 +1,6 @@
 {
   "name": "html2plaintext",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "convert html-formatted text to plaintext",
   "main": "index.js",
   "directories": {
@@ -15,7 +15,9 @@
     "plain",
     "text"
   ],
-  "contributors": ["jden <jason@denizac.org>"],
+  "contributors": [
+    "jden <jason@denizac.org>"
+  ],
   "author": "Agile Diagnosis <hello@agilediagnosis.com>",
   "license": "MIT",
   "devDependencies": {
@@ -24,7 +26,7 @@
     "mocha": "~1.9.0"
   },
   "dependencies": {
-    "htmldec": "0.0.1",
-    "plumb": "~0.1.0"
+    "plumb": "~0.1.0",
+    "ent": "0.0.5"
   }
 }

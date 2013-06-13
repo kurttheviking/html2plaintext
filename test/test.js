@@ -15,10 +15,12 @@ describe('html2plaintext', function () {
       .should.equal('Hey there, Jon')
   })
   it('treats whitespace like a browser - collapse repeated space', function () {
-
     h2p('<h1>It is  aa maaaa   zzzzz       ing!</h1>')
       .should.equal('It is aa maaaa zzzzz ing!')
-
+  })
+  it('strips html whitespace entities', function () {
+    h2p('hi&nbsp;')
+      .should.equal('hi')
   })
   it('ignores linebreaks', function () {
     h2p('hi\n\n\n\n<b>foo</b>\n')
