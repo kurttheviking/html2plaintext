@@ -22,6 +22,10 @@ describe('html2plaintext', function () {
     h2p('hi&nbsp;')
       .should.equal('hi')
   })
+  it('decodes all kinds of HTML entities', function () {
+    h2p('Foo &copy; bar &#x1D306; baz &#9731; qux &awint;')
+      .should.equal('Foo \xA9 bar \uD834\uDF06 baz \u2603 qux \u2A11')
+  })
   it('ignores linebreaks', function () {
     h2p('hi\n\n\n\n<b>foo</b>\n')
       .should.equal('hi foo')
