@@ -1,6 +1,6 @@
 {
   "name": "html2plaintext",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "convert html-formatted text to plaintext",
   "main": "index.js",
   "directories": {
@@ -16,7 +16,8 @@
     "text"
   ],
   "contributors": [
-    "jden <jason@denizac.org>"
+    "jden <jason@denizac.org>",
+    "Mathias Bynens <http://mathiasbynens.be/>"
   ],
   "author": "Agile Diagnosis <hello@agilediagnosis.com>",
   "license": "MIT",
