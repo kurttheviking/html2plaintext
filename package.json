@@ -22,12 +22,13 @@
   "author": "Agile Diagnosis <hello@agilediagnosis.com>",
   "license": "MIT",
   "devDependencies": {
-    "heredoc": "~1.1.0",
-    "chai": "~1.5.0",
-    "mocha": "~1.9.0"
+    "heredoc": "1.1.0",
+    "chai": "1.5.0",
+    "mocha": "1.9.0"
   },
   "dependencies": {
-    "plumb": "~0.1.0",
-    "he": "~0.1.1"
+    "cheerio": "0.13.1",
+    "he": "0.1.1",
+    "plumb": "0.1.0"
   }
 }
