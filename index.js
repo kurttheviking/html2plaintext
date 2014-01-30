@@ -3,6 +3,16 @@ var decode = require('he').decode;
 var plumb = require('plumb');
 
 
+// "private" helper for ensuring html entities are properly escaped
+function _escapeHtml (input) {
+  return String(input)
+   .replace(/&/g, '&amp;')
+   .replace(/</g, '&lt;')
+   .replace(/>/g, '&gt;')
+   .replace(/"/g, '&quot;')
+   .replace(/'/g, '&#039;');
+ }
+
 // "private" helper for list processing into plaintext
 function _list (str, isOrdered) {
   if (!str) return str;
@@ -17,7 +27,7 @@ function _list (str, isOrdered) {
     $el.find('li').each(function (j, li) {
       var tick = isOrdered ? String(j + 1) + '.' : '-';
 
-      $out('p').append(tick + ' ' + $(li).text() + '<br />');
+      $out('p').append(tick + ' ' + _escapeHtml($(li).text()) + '<br />');
     });
 
     // avoid excess spacing coming off last element
@@ -31,17 +41,17 @@ function _list (str, isOrdered) {
 }
 
 function stringify(x) {
-  return x ? x.toString() : '';
+  var output = x ? x.toString() : '';
+  return output;
 }
 
 function collapseWhitespace (val) {
-  val = val.replace(/\s+/g, ' ');
-
-  return val;
+  var output = val.replace(/\s+/g, ' ');
+  return output;
 }
 
 function linebreaks (str) {
-  return str.replace(/<\s?(p|br)[^<]*>/gi, function (x, tag) {
+  var output = str.replace(/<\s?(p|br)[^<]*>/gi, function (x, tag) {
     switch (tag.toLowerCase()) {
       case 'p':
         return '\n\n';
@@ -51,23 +61,29 @@ function linebreaks (str) {
 
     return x;
   });
+
+  return output;
 }
 
 function listOrdered (str) {
-  return _list(str, true);
+  var output = _list(str, true);
+  return output;
 }
 
 function listUnordered (str) {
-  return _list(str, false);
+  var output = _list(str, false);
+  return output;
 }
 
 function stripTags (str) {
-  return str.replace(/<[^<]+>/g, '');
+  var output = str.replace(/<[^<]+>/g, '');
+  return output;
 }
 
 function trim (str) {
   return str.trim();
 }
+
 
 module.exports = plumb(
   listOrdered,
