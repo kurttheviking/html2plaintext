@@ -1,32 +1,30 @@
-# html2plaintext
-convert html-formatted text to plaintext
+html2plaintext
+==============
+
+Convert html-formatted text to plaintext
 
 - strip tags
+- reformat ordered/unordered lists
 - treat whitespace like a browser
 - decode html entities
 
-## usage
+
+### Use
 
     var h2p = require('html2plaintext')
 
      h2p('<p>Hello,\n   &amp; <em>how  are you?</em></p>')
     // => "Hello, & how are you?"
 
-## installation
+
+### Install
 
     $ npm install html2plaintext
 
-## running the tests
+
+### Test
 
 From project root:
 
     $ npm install
     $ npm test
-
-## contributors
-
-jden <jason@denizac.org>
-
-## license
-
-MIT (c) 2013 Agile Diagnosis <hello@agilediagnosis.com>
