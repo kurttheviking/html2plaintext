@@ -40,6 +40,13 @@ function _list (str, isOrdered) {
   return $.html();
 }
 
+function numToString(x) {
+  if (typeof x === 'number')
+    return x.toString()
+
+  return x;
+}
+
 function stringify(x) {
   var output = x ? x.toString() : '';
   return output;
@@ -86,6 +93,7 @@ function trim (str) {
 
 
 module.exports = plumb(
+  numToString,
   listOrdered,
   listUnordered,
   stringify,
