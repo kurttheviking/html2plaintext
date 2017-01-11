@@ -23,13 +23,13 @@
   "author": "kurttheviking <kurttheviking@outlook.com>",
   "license": "MIT",
   "devDependencies": {
-    "heredoc": "1.1.0",
-    "chai": "1.5.0",
-    "mocha": "1.9.0"
+    "heredoc": "1.3.1",
+    "chai": "3.5.0",
+    "mocha": "3.2.0"
   },
   "dependencies": {
-    "cheerio": "0.13.1",
-    "he": "0.1.1",
+    "cheerio": "0.22.0",
+    "he": "1.1.0",
     "plumb": "0.1.0"
   }
 }
