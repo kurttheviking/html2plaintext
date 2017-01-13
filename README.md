@@ -11,20 +11,22 @@ Convert html-formatted text to plaintext
 
 ### Use
 
-    var h2p = require('html2plaintext')
+```js
+var h2p = require('html2plaintext')
 
-     h2p('<p>Hello,\n   &amp; <em>how  are you?</em></p>')
-    // => "Hello, & how are you?"
-
+h2p('<p>Hello,\n   &amp; <em>how  are you?</em></p>')
+// => "Hello, & how are you?"
+```
 
 ### Install
 
-    $ npm install html2plaintext
-
+```sh
+npm install html2plaintext
+```
 
 ### Test
 
-From project root:
-
-    $ npm install
-    $ npm test
+```sh
+npm install
+npm test
+```
