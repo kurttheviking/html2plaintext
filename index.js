@@ -2,7 +2,6 @@ var cheerio = require('cheerio');
 var decode = require('he').decode;
 var plumb = require('plumb');
 
-
 // "private" helper for ensuring html entities are properly escaped
 function _escapeHtml (input) {
   return String(input)
@@ -41,8 +40,11 @@ function _list (str, isOrdered) {
 }
 
 function stringify(x) {
-  var output = x ? x.toString() : '';
-  return output;
+  if (x === null || x === undefined) {
+    return ''
+  };
+
+  return String(x);
 }
 
 function collapseWhitespace (val) {
@@ -66,18 +68,15 @@ function linebreaks (str) {
 }
 
 function listOrdered (str) {
-  var output = _list(str, true);
-  return output;
+  return _list(str, true);
 }
 
 function listUnordered (str) {
-  var output = _list(str, false);
-  return output;
+  return _list(str, false);
 }
 
 function stripTags (str) {
-  var output = str.replace(/<[^<]+>/g, '');
-  return output;
+  return str.replace(/<[^<]+>/g, '');
 }
 
 function trim (str) {
@@ -86,9 +85,9 @@ function trim (str) {
 
 
 module.exports = plumb(
+  stringify,
   listOrdered,
   listUnordered,
-  stringify,
   collapseWhitespace,
   linebreaks,
   stripTags,
