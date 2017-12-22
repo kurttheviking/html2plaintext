@@ -39,6 +39,15 @@ function _list (str, isOrdered) {
   return $.html();
 }
 
+function stripStylesAndScripts(str) {
+  var $ = cheerio.load(str);
+
+  $('script').remove();
+  $('style').remove();
+
+  return $.html();
+}
+
 function stringify(x) {
   if (x === null || x === undefined) {
     return ''
@@ -86,6 +95,7 @@ function trim (str) {
 
 module.exports = plumb(
   stringify,
+  stripStylesAndScripts,
   listOrdered,
   listUnordered,
   collapseWhitespace,
