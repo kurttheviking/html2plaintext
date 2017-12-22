@@ -93,6 +93,20 @@ describe('html2plaintext', function () {
     expect(expected).to.equal(observed);
   });
 
+  it('removes <style> tags including content', function () {
+    var expected = 'Hello world';
+    var observed = h2p('<html><head><style>.foo {color: red;}</style><body>Hello world</body></head>');
+
+    expect(expected).to.equal(observed);
+  });
+
+  it('removes <script> tags including content', function () {
+    var expected = 'Hello world';
+    var observed = h2p('<html><head><script>const foo = "bar";</script><body>Hello world</body></head>');
+
+    expect(expected).to.equal(observed);
+  });
+
   it('is safe on null input', function () {
     var expected = '';
     var observed = h2p(null);
