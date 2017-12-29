@@ -1,11 +1,8 @@
 {
   "name": "html2plaintext",
   "version": "2.0.0",
-  "description": "Convert html-formatted text to plaintext",
+  "description": "Convert HTML-formatted text to plaintext",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
     "test": "node node_modules/mocha/bin/mocha"
   },
@@ -16,11 +13,24 @@
     "text"
   ],
   "contributors": [
-    "jden <jason@denizac.org>",
-    "Mathias Bynens <http://mathiasbynens.be/>",
-    "kurttheviking <kurttheviking@outlook.com>"
+    {
+      "name": "Jason Denizac",
+      "url": "https://github.com/js-n"
+    },
+    {
+      "name": "Mathias Bynens",
+      "url": "https://github.com/mathiasbynens"
+    },
+    {
+      "name": "Carsten Blüm",
+      "url": "https://github.com/BlueM"
+    }
   ],
-  "author": "kurttheviking <kurttheviking@outlook.com>",
+  "author": {
+    "name": "Kurt Ericson",
+    "email": "github@kurttheviking.com",
+    "url": "http://github.com/kurttheviking"
+  },
   "license": "MIT",
   "devDependencies": {
     "heredoc": "1.3.1",
