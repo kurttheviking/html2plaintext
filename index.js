@@ -84,6 +84,10 @@ function listUnordered (str) {
   return _list(str, false);
 }
 
+function stripCssConditionalComment (str) {
+  return str.replace(/<!--\[if.*?<!\[endif\]-->/g, '');
+}
+
 function stripTags (str) {
   return str.replace(/<[^<]+>/g, '');
 }
@@ -100,6 +104,7 @@ module.exports = plumb(
   listUnordered,
   collapseWhitespace,
   linebreaks,
+  stripCssConditionalComment,
   stripTags,
   decode,
   trim

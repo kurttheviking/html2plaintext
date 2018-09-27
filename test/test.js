@@ -120,4 +120,11 @@ describe('html2plaintext', function () {
 
     expect(expected).to.equal(observed);
   });
+  
+  it('remove CSS conditional comments', function() {
+    var expected = '';
+    var observed = h2p('<!--[if !mso]>\nThis is a test\n<![endif]-->');
+
+    expect(expected).to.equal(observed);
+  });
 });
