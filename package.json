@@ -38,8 +38,8 @@
     "mocha": "3.2.0"
   },
   "dependencies": {
-    "cheerio": "0.22.0",
-    "he": "1.1.0",
+    "cheerio": "1.0.0-rc.2",
+    "he": "1.2.0",
     "plumb": "0.1.0"
   }
 }
