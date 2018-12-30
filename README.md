@@ -14,7 +14,7 @@ Convert html-formatted text to plaintext
 ```js
 var h2p = require('html2plaintext')
 
-h2p('<p>Hello,\n   &amp; <em>how  are you?</em></p>')
+h2p('<p>Hello,\n   &amp; <em>how  are <a href="https://me.com">you</a>?</em></p>')
 // => "Hello, & how are you?"
 ```
 
