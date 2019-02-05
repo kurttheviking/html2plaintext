@@ -31,6 +31,7 @@
     "email": "github@kurttheviking.com",
     "url": "http://github.com/kurttheviking"
   },
+  "typings": "h2p.d.ts",
   "license": "MIT",
   "devDependencies": {
     "heredoc": "1.3.1",
