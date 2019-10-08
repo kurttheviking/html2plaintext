@@ -75,8 +75,8 @@ describe('html2plaintext', function () {
   });
 
   it('inserts 2 linebreaks after (some) other block-level elements', function () {
-    var expected = 'Foo\n\nBar\n\nBaz\n\nQux.';
-    var observed = h2p('<h1>Foo</h1><h2>Bar</h2><blockquote>Baz</blockquote><div>Qux.</div>');
+    var expected = 'Foo\n\nBar\n\nBaz\n\nQux\n\nFred.';
+    var observed = h2p('<h1>Foo</h1><h2>Bar</h2><blockquote>Baz</blockquote><div>Qux</div><pre>Fred.</pre>');
 
     expect(expected).to.equal(observed);
   });

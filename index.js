@@ -67,7 +67,7 @@ function linebreaks (str) {
     // Replace <br> with `\n`
     .replace(/<\s*br\b[^<]*>/gi, '\n')
     // Replace <p> and some other block-level elements with `\n\n`
-    .replace(/<\s*(p|h[1-6]|address|blockquote|div)\b[^<]*>/gi, '\n\n')
+    .replace(/<\s*(address|blockquote|div|h[1-6]|p|pre)\b[^<]*>/gi, '\n\n')
 }
 
 function listOrdered (str) {
