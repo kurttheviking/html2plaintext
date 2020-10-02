@@ -6,7 +6,7 @@ Convert html-formatted text to plaintext
 - strip tags
 - reformat ordered/unordered lists
 - treat whitespace like a browser
-- decode html entities
+- decode HTML entities
 
 
 ### Use
