@@ -1,4 +1,4 @@
-html2plaintext
+html2 plaintext
 ==============
 
 Convert html-formatted text to plaintext
