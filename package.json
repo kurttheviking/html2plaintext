@@ -38,7 +38,7 @@
     "mocha": "5.2.0"
   },
   "dependencies": {
-    "cheerio": "1.0.0-rc.2",
+    "cheerio": "1.0.0-rc.10",
     "he": "1.2.0",
     "plumb": "0.1.0"
   }
