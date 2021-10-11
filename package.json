@@ -31,14 +31,17 @@
     "email": "github@kurttheviking.com",
     "url": "http://github.com/kurttheviking"
   },
+  "typings": "h2p.d.ts",
   "license": "MIT",
   "devDependencies": {
+    "chai": "4.3.4",
     "heredoc": "1.3.1",
-    "chai": "4.2.0",
-    "mocha": "5.2.0"
+    "mocha": "9.1.2",
+    "webpack": "5.58.1",
+    "webpack-cli": "4.9.0"
   },
   "dependencies": {
-    "cheerio": "1.0.0-rc.2",
+    "cheerio": "1.0.0-rc.10",
     "he": "1.2.0",
     "plumb": "0.1.0"
   }
