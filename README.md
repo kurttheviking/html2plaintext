@@ -24,6 +24,17 @@ h2p('<p>Hello,\n   &amp; <em>how  are <a href="https://me.com">you</a>?</em></p>
 npm install html2plaintext
 ```
 
+**Install some dependencies**
+
+```sh
+npm install cheerio
+
+npm install he
+
+npm install plumb
+
+```
+
 ### Test
 
 ```sh
