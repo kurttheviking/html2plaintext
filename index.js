@@ -62,18 +62,12 @@ function collapseWhitespace (val) {
 }
 
 function linebreaks (str) {
-  var output = str.replace(/<\s?(p|br)[^<]*>/gi, function (x, tag) {
-    switch (tag.toLowerCase()) {
-      case 'p':
-        return '\n\n';
-      case 'br':
-        return '\n';
-    }
-
-    return x;
-  });
-
-  return output;
+  // NB: this function turns `<p>Foo</p><p>Bar</p>` to `\n\nFoo</p>\n\nBar</p>`
+  return str
+    // Replace <br> with `\n`
+    .replace(/<\s*br\b[^<]*>/gi, '\n')
+    // Replace <p> and some other block-level elements with `\n\n`
+    .replace(/<\s*(address|blockquote|div|h[1-6]|p|pre)\b[^<]*>/gi, '\n\n')
 }
 
 function listOrdered (str) {
